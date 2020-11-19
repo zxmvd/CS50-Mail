@@ -1,0 +1,54 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h2>{{ request.user.email }}</h2>
+
+    <button class="btn btn-sm btn-outline-primary" id="inbox">Inbox</button>
+    <button class="btn btn-sm btn-outline-primary" id="compose">Compose</button>
+    <button class="btn btn-sm btn-outline-primary" id="sent">Sent</button>
+    <button class="btn btn-sm btn-outline-primary" id="archived">Archived</button>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
+    <hr>
+
+    <div class="list-group" id="emails-view">
+    </div>
+    <div id="message"></div>
+
+    <div id="read-view" class="container card card-body">
+        read-view
+    </div>
+    <div id="message"></div>
+
+    <div id="compose-view">
+        <h3>New Email</h3>
+    <form id="compose-form" class="needs-validation" novalidate>
+            <div class="form-group">
+                <input disabled class="form-control" value="{{ request.user.email }}">
+            </div>
+            <div class="form-group">
+                <strong>Recipients: </strong><small>
+                    <label>least one recipient required, for multiples use commas.</label> </small><br>
+                <input id="compose-recipients" class="form-control" placeholder="receipiant" required>
+                <div class="invalid-feedback font-weight-bold" id="recipients-alert">Please include at least one
+                    recipient.
+                </div>
+            </div>
+            <div class="form-group">
+                <strong>Subject: </strong><label><small>Please Include a Subject.</small></label>
+                <input class="form-control" id="compose-subject" placeholder="Subject">
+            </div>
+            <div class="for-control">
+                <strong>Body: </strong><label><small>Write the body of the email.</small></label>
+                <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
+            </div>
+            <input type="submit" class="btn btn-info my-3" value="Send"/>
+
+
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'mail/inbox.js' %}"></script>
+{% endblock %}
