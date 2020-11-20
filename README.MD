@@ -27,4 +27,4 @@ Request the email and render a view displaying its content. Once clicked on, the
 <h3>Reply:</h3>
 When the user clicks the “Reply” button, a pre-filled email composition form will be returned. 
 
-<a href="mail/static/mail/index.js">Javascrip Code</a>
+<a href="mail/static/mail/inbox.js">Javascrip Code</a>
