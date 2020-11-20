@@ -6,18 +6,18 @@ PSW: 123<br>
 
 # Features
 <h3>Mailbox:<h3>
-When a user visits their Inbox, Sent mailbox, or Archive, load the appropriate mailbox. 
-<img src="staticfiles/inbox.png" style="width:300px">
-<img src="staticfiles/sent.png" style="width:300px">
-<img src="staticfiles/arch.png" style="width:300px">
+<p>When a user visits their Inbox, Sent mailbox, or Archive, load the appropriate mailbox.</p>
+<img src="staticfiles/inbox.png" width=300/>
+<img src="staticfiles/sent.png" width=300/>
+<img src="staticfiles/arch.png" width=300/>
 <hr> 
 <h3>Send Mail:</h3>
 When a user submits the email composition form, the JavaScript code actually send the email to recipients registered in the database.
-<img src="staticfiles/compose.png" style="width:300px">
+<img src="staticfiles/compose.png" width=300/>
 <hr>
 <h3>View Email:</h3>
 Request the email and render a view displaying its content. Once clicked on, the email should be marked as read. Allow users to archive/unarchive received emails (but not applying to sent emails).
-<img src="staticfiles/email.png" style="width:300px">
+<img src="staticfiles/email.png" width=300/>
 <hr> 
 <h3>Reply:</h3>
 When the user clicks the “Reply” button, a pre-filled email composition form will be returned. 
