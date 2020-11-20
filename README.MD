@@ -1,23 +1,24 @@
 # Specification
 This is a <str>single-page email app</str> makes API calls to send and receive emails, implementing by vanilla JavaScript, HTML, and Django backend. <br>
-<a href="https://cs50-mail.herokuapp.com/">Live Demo</a><br>
-Email: <a>user<span>@</spn>example.com</a><br>
+<a href="https://cs50-mail.herokuapp.com/">Live Demo</a> with 
+Email: <a>user<span>@</spn>example.com</a>
 PSW: 123<br>
 
 # Features
+
 <h3>Mailbox:<h3>
-<p>When a user visits their Inbox, Sent mailbox, or Archive, load the appropriate mailbox.</p>
-<img src="staticfiles/inbox.png" width=300/>
-<img src="staticfiles/sent.png" width=300/>
-<img src="staticfiles/arch.png" width=300/>
+When a user visits their Inbox, Sent mailbox, or Archive, load the appropriate mailbox.
+<img src="staticfiles/inbox.png" width=400/>
+<img src="staticfiles/sent.png" width=400/>
+<img src="staticfiles/arch.png" width=400/>
 <hr> 
 <h3>Send Mail:</h3>
 When a user submits the email composition form, the JavaScript code actually send the email to recipients registered in the database.
-<img src="staticfiles/compose.png" width=300/>
+<img src="staticfiles/compose.png" width=400/>
 <hr>
 <h3>View Email:</h3>
 Request the email and render a view displaying its content. Once clicked on, the email should be marked as read. Allow users to archive/unarchive received emails (but not applying to sent emails).
-<img src="staticfiles/email.png" width=300/>
+<img src="staticfiles/email.png" width=400/>
 <hr> 
 <h3>Reply:</h3>
 When the user clicks the “Reply” button, a pre-filled email composition form will be returned. 
