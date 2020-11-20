@@ -26,7 +26,7 @@ function view_display(view) {
 function load_mailbox(mailbox) {
 
   const defalt_list_style = 
-  "list-group-item list-group-item-action flex-column align-items-start";
+  "list-group-item list-group-item-action flex-column align-items-start mb-1";
 
   // Show the mailbox and hide other views
   view_display('emails');
@@ -53,9 +53,9 @@ function load_mailbox(mailbox) {
         const email_box = document.createElement('a');
         //return different "read" badge depend on read status. 
         let is_read = (element.read === true)? 
-        '<span class="badge badge-success badge-pill">read</span>' 
+        '<span class="badge-read px-3">READ</span>' 
         : 
-        '<span class="badge badge-danger badge-pill">unread</span>';
+        '<span class="badge-unread px-3">NEW</span>';
         //no read element if email in sent box
         let show_read = (mailbox=='sent')? '' : `${is_read}`;
         
@@ -68,9 +68,11 @@ function load_mailbox(mailbox) {
         // sent mails doesnt show sender, inbox emails doesnt show recipient.
         let content = (mailbox=='sent')?  '' : `<strong>From:</strong> ${element.sender}<br>`;
         content += (mailbox=='sent')? `<strong>To:</strong> ${element.recipients}<br>` : '';
-        content += `<strong>Subject: </strong>`  + (element.subject? `${element.subject}<br>` : 'No Subject<br>')
-        + `<span class="badge badge-info badge-pill"><strong>On</strong> ${element.timestamp}</span> 
-           <span style="float:right">${show_read}</span><br>`;
+        content += `<strong>Subject: </strong>`  + (element.subject? `${element.subject}` : 'No Subject')
+        + `<div class="badge badge-info badge-pill" style="float:right">
+           <span><strong>On</strong> ${element.timestamp}</span> 
+           ${show_read}
+           </div>`;
         email_box.innerHTML = content;
 
         document.querySelector('#emails-view').append(email_box);

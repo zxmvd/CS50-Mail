@@ -2,3 +2,16 @@ textarea {
     min-height: 400px;
 }
 
+.badge-unread {
+    color: #e60000;
+    font-weight: bolder;
+}
+
+.badge-read {
+    color: #006600;
+    font-weight: bold;
+}
+
+.list-group-item+ .list-group-item {
+    border-top-width: 1px;
+}
