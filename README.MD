@@ -4,6 +4,8 @@ This is a <strong>single-page email app</strong> makes API calls to send and rec
 Email: <a>user<span>@</spn>example.com</a><br>
 PSW: 123<br>
 
+<a href="mail/static/mail/inbox.js"><strong>JavaScript Code</strong></a><br>
+
 # Features
 
 <h3>Mailbox:<h3>
