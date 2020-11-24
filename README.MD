@@ -1,9 +1,8 @@
 # Specification
 This is a <strong>single-page email app</strong> makes API calls to send and receive emails, implementing by vanilla JavaScript, HTML, and Django backend. <br>
 
-<a href="https://cs50-mail.herokuapp.com/"><strong>Live Demo</strong></a> with<br>
-Email: <a>user<span>@</spn>example.com</a><br>
-PSW: 123<br>
+<a href="https://cs50-mail.herokuapp.com/"><strong>Live Demo</strong></a><br>
+
 
 Check out the JavaScript Code in <a href="mail/static/mail/inbox.js">mail/static/mail/inbox.js</a><br>
 
